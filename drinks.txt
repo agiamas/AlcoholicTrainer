@@ -1,0 +1,44 @@
+drink:
+
+glass: small, large, martini etc
+garnishes: sugar , lime, sugar etc
+ingredient1, quantity
+ingredient2, quantity 
+etc...
+special instruction like "float", ingredient
+
+
+xml filetype:
+<drinks>
+<drink>
+  <glass>
+    <value>
+      small
+    </value>
+  </glass>
+  <garnishes>
+    <garnish>
+    </garnish>
+    <garnish>
+    </garnish>
+  </garnishes>
+  <ingredients>
+    <ingredient>
+      <name>
+        tequila
+      </name>
+      <quantity>
+        4
+      </quantity>
+      <specialInstructions>
+        float/fill
+      </specialInstructions>
+    </ingredient>
+  </ingredients>
+</drink>
+.....
+</drinks>
+
+
+app config properties:
+time per drink=30 seconds
