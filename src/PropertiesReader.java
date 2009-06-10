@@ -83,4 +83,39 @@ String propFile;
 			  }
 		  return null;
 	}
+
+	LinkedList getDrinkElements(String drink) {
+		try {
+			  LinkedList drinks = new LinkedList();
+			  File file = new File(this.propFile);
+			  DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			  DocumentBuilder db = dbf.newDocumentBuilder();
+			  Document doc = db.parse(file);
+			  doc.getDocumentElement().normalize();
+			  
+			  NodeList nodeLst = doc.getElementsByTagName(drink);
+			  System.out.println("in getdrinkelemetns00"+drink);
+			  for (int s = 0; s < nodeLst.getLength(); s++) {
+			    Node fstNode = nodeLst.item(s);
+			    if (fstNode.getNodeType() == Node.ELEMENT_NODE) {
+			    	Element fstElmnt = (Element) fstNode;
+			    	NodeList fstNmElmntLst = fstElmnt.getElementsByTagName("ingredients");
+			    	Element fstNmElmnt = (Element) fstNmElmntLst.item(0);
+			    	NodeList fstNm = fstNmElmnt.getChildNodes();
+			    	NodeList lstNmElmntLst = fstElmnt.getElementsByTagName(drink);
+			    	Element lstNmElmnt = (Element) lstNmElmntLst.item(0);
+			    	NodeList lstNm = lstNmElmnt.getChildNodes();
+			    	drinks.add(((Node) lstNm.item(0)).getNodeValue());
+			    	System.out.println("in getdrinkelemetns");
+			  //    	System.out.println("drink: " + ((Node) lstNm.item(0)).getNodeValue());
+			    }
+			  }
+			  //  drinks.add(nodeLst.item(i));
+			  return drinks;
+			  
+			  } catch (Exception e) {
+				    e.printStackTrace();
+				  }
+			  return null;
+	}
 }
