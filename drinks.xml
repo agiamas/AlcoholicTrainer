@@ -1,88 +1,14 @@
 <drinks>
 <drink>
-  <name>
-    Vodka-Tequila special drink
-  </name>
-  <glass>
-    <value>
-      small
-    </value>
-  </glass>
-  <garnishes>
-    <garnish>
-	garnish1
-    </garnish>
-    <garnish>
-	garnish2
-    </garnish>
-  </garnishes>
-  <ingredients>
-    <ingredient>
-      <name>
-        tequila
-      </name>
-      <quantity>
-        4
-      </quantity>
-      <specialInstructions>
-        float/fill
-      </specialInstructions>
-    </ingredient>
-    <ingredient>
-      <name>
-        vodka
-      </name>
-      <quantity>
-        5
-      </quantity>
-      <specialInstructions>
-        null
-      </specialInstructions>
-    </ingredient>
-  </ingredients>
-</drink>
-<drink>
-  <name>
-    Vodka-Tequila special drink2
-  </name>
-  <glass>
-    <value>
-      small
-    </value>
-  </glass>
-  <garnishes>
-    <garnish>
-	garnish1
-    </garnish>
-    <garnish>
-	garnish2
-    </garnish>
-  </garnishes>
-  <ingredients>
-    <ingredient>
-      <name>
-        tequila
-      </name>
-      <quantity>
-        4
-      </quantity>
-      <specialInstructions>
-        float/fill
-      </specialInstructions>
-    </ingredient>
-    <ingredient>
-      <name>
-        vodka
-      </name>
-      <quantity>
-        5
-      </quantity>
-      <specialInstructions>
-        null
-      </specialInstructions>
-    </ingredient>
-  </ingredients>
-</drink>
-</drinks>
-
-
+<ingredients>
+<ingredient>
+<name>vodka</name><quantity>2</quantity><specialInstruction /></ingredient><ingredient><name>baileys</name><quantity>2</quantity><specialInstruction /></ingredient>
+<ingredient><name>amaretto</name><quantity>2</quantity><specialInstruction /></ingredient>
+<ingredient><name>kahlua</name><quantity>2</quantity><specialInstruction /></ingredient>
+</ingredients>
+<name>screaming orgasm</name>
+<glass>tall</glass>
+<garnishes>
+<garnish>
+<name /></garnish></garnishes></drink>
+<drink><ingredients><ingredient><name>vodka</name><quantity>4</quantity><specialInstruction /></ingredient><ingredient><name>sweet and sour </name><quantity></quantity><specialInstruction>fill</specialInstruction></ingredient><ingredient><name>soda water</name><quantity></quantity><specialInstruction>fill</specialInstruction></ingredient></ingredients><name>vodka collins</name><glass>tall</glass><garnishes><garnish><name>cherry</name></garnish><garnish><name>lime</name></garnish></garnishes></drink></drinks>
