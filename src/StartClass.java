@@ -11,7 +11,6 @@ public class StartClass {
 	/**
 	 * @param args
 	 */
-
 	
 	public static void main(String[] args) {
 		Iterator iterator;
@@ -19,8 +18,13 @@ public class StartClass {
 		Document tempdoc;
 		tempdoc = pr.getDocument();
 		LinkedList drinks = pr.getDrinks();
-		LinkedList elements = pr.getDrinkElements(drinks.get(0).toString());
-		System.out.println( elements);
+
+		LinkedList drinkelements = pr.getDrinkElements(drinks.get(1).toString());
+		 Iterator itr = drinkelements.iterator();
+		 while(itr.hasNext()) {
+			 System.out.println("drink elements:" + itr.next());	
+		 }
+		
 		// testing code for the linkedlist of the drinks we got.
 		/*		iterator = drinks.iterator();     
 	    while (iterator.hasNext()){
