@@ -23,7 +23,11 @@ public class StartScreen {
 		b1.setText("Start!"); 
 		//adding the listener so that we can change view when clicking...
 		b1.addSelectionListener(new SelectionAdapter( ) {    public void widgetSelected(SelectionEvent e) { 
-	         System.out.println("Push Me Was Pushed"); 
+	         System.out.println("Start the test!");
+	         display.dispose();
+	         //1 for simple, 2 for intermediate, 3 for advanced mode
+	         // simple is only ingredients, interm is 1+quantities, adv is 2+special instructions
+	         MainScreen ms = new MainScreen(1);
 	   } 
 	});
 		final Label l1 = new Label(shell, SWT.CENTER);

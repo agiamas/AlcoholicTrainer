@@ -18,21 +18,17 @@ public class StartClass {
 		Document tempdoc;
 		tempdoc = pr.getDocument();
 		LinkedList drinks = pr.getDrinks();
-
-		LinkedList drinkelements = pr.getDrinkElements(drinks.get(1).toString());
+		Iterator itr2 = drinks.iterator();
+	
+		 LinkedList drinkelements = pr.getDrinkElements(drinks.get(0).toString(), 0);
+		//LinkedList drinkelements = pr.getDrinkElements("screaming orgasm");
 		 Iterator itr = drinkelements.iterator();
 		 while(itr.hasNext()) {
 			 System.out.println("drink elements:" + itr.next());	
 		 }
+		StartScreen ss = new StartScreen();
+				
 		
-		// testing code for the linkedlist of the drinks we got.
-		/*		iterator = drinks.iterator();     
-	    while (iterator.hasNext()){
-	      System.out.print("the drinks we got: " + iterator.next()+" ");  
-	    }
-	*/
-		// TODO Auto-generated method stub
-
 	}
 	
 	

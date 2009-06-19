@@ -1,9 +1,12 @@
 <drinks>
-<drink>
+<drink type="screaming orgasm">
 <ingredients>
 <ingredient>
 <name>vodka</name>
-<quantity>2</quantity><specialInstruction /></ingredient><ingredient><name>baileys</name><quantity>2</quantity><specialInstruction /></ingredient>
+<quantity>2</quantity>
+<specialInstruction />
+</ingredient>
+<ingredient><name>baileys</name><quantity>2</quantity><specialInstruction /></ingredient>
 <ingredient><name>amaretto</name><quantity>2</quantity><specialInstruction /></ingredient>
 <ingredient><name>kahlua</name><quantity>2</quantity><specialInstruction /></ingredient>
 </ingredients>
@@ -14,5 +17,5 @@
 
 </garnish>
 </garnishes>
-</drink>
-<drink><ingredients><ingredient><name>vodka</name><quantity>4</quantity><specialInstruction /></ingredient><ingredient><name>sweet and sour </name><quantity></quantity><specialInstruction>fill</specialInstruction></ingredient><ingredient><name>soda water</name><quantity></quantity><specialInstruction>fill</specialInstruction></ingredient></ingredients><drinkname>vodka collins</drinkname><glass>tall</glass><garnishes><garnish><name>cherry</name></garnish><garnish><name>lime</name></garnish></garnishes></drink></drinks>
+</drink >
+<drink><ingredients><ingredient><name>vodka2</name><quantity>4</quantity><specialInstruction /></ingredient><ingredient><name>sweet and sour </name><quantity></quantity><specialInstruction>fill</specialInstruction></ingredient><ingredient><name>soda water</name><quantity></quantity><specialInstruction>fill</specialInstruction></ingredient></ingredients><drinkname>vodka collins</drinkname><glass>tall</glass><garnishes><garnish><name>cherry</name></garnish><garnish><name>lime</name></garnish></garnishes></drink></drinks>
