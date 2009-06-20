@@ -14,7 +14,7 @@ public class MainScreen {
 	Display display;
 	Shell shell;
 	String selectedMode;
-	
+	Button[] checkBoxs;
 	
 
 	//@TODO : make this configurable through ini file 
@@ -36,25 +36,20 @@ public class MainScreen {
 		shell.setText("alcoholic trainer test");
 
 		final Button b1 = new Button(shell, SWT.PUSH); 
-		b1.setBounds(90,90,75,40); 
+		b1.setBounds(140,140,75,40); 
 		b1.setText("submit"); 
 		
 		//adding the listener so that we can change view when clicking...
 		b1.addSelectionListener(new SelectionAdapter( ) 
 		{    
-			public void widgetSelected(SelectionEvent e) { 
-				Button[] checkedButtons;
-				NextQuestion nq = new NextQuestion();
-				checkedButtons = nq.RenderNextQuestion(shell, numberOfQuestions);
-				//if its the first time invoked, do nothing, else get the values for the buttons
-				//and then clear the buttons from the gui
-				if(checkedButtons != null) {
-				System.out.println("button 0:"+checkedButtons[0]);
-				this.processAnswer(checkedButtons);
-				for(int i=0; i< checkedButtons.length; i++) {
-					//checkedButtons[i].dispose();
-					System.out.println("button " + i + " is set");
+			public void widgetSelected(SelectionEvent e) {
+			if(checkBoxs != null){	
+				this.processAnswer(checkBoxs);
+				for(int i = 0; i < checkBoxs.length; i++) {
+					checkBoxs[i].dispose();
 				}
+			}
+				this.drawChoices();
 				if(numberOfQuestions<=0) { 
 					//@TODO: replace the exit with drawing the final screen.
 					System.out.println("finished the test. now draw the final screen");
@@ -65,8 +60,36 @@ public class MainScreen {
 			/*	System.out.println("button name:" + checkedButtons[0].getText());
 				System.out.println("button value:" + checkedButtons[0].isEnabled());
 				System.out.println("go ahead");*/
-		}
+		
+			private void drawChoices() {
+				//get a random drink from the list
+				PropertiesReader pr = new PropertiesReader("c:\\Users\\kenny\\workspace\\AlcoholicTrainer\\drinks.xml");
+				LinkedList drinks = pr.getDrinks();
+				Random r = new Random();
+				int randomDrink = r.nextInt(drinks.size());
+				//System.out.println("random drink:" + randomDrink);
+				LinkedList drinkelements = pr.getDrinkElements(drinks.get(randomDrink).toString(), 0);
+
+				shell.setText(drinks.get(randomDrink).toString());
+				checkBoxs = new Button[drinkelements.size()];
+				//System.out.println("drink elements size:" + drinkelements.size());
+				for(int i=0; i< drinkelements.size(); i++) {
+					checkBoxs[i] = new Button(shell, SWT.CHECK);
+					checkBoxs[i].setSelection(true);
+					checkBoxs[i].setBounds(50,50+25*i, 75+25*i,200);
+					checkBoxs[i].setText(drinkelements.get(i).toString());
+					checkBoxs[i].pack();
+				}
+				
+			}
 			private void processAnswer(Button[] checkedButtons){
+				System.out.println("checking in input params>>>>>>>>>>>>>>");
+				System.out.println(checkedButtons[0].getSelection());
+				System.out.println(checkedButtons[1].getSelection());
+				System.out.println(checkedButtons[2].getSelection());
+				System.out.println(checkedButtons[3].getSelection());
+				//getselection returns true or false.
+				
 				System.out.println("question is:");
 				Random r = new Random();
 				Boolean bool = r.nextBoolean();
@@ -80,7 +103,7 @@ public class MainScreen {
 					numberOfQuestions--;
 			}
 
-	
+		
 	});
 		//final Label l1 = new Label(shell, SWT.CENTER);
 		//l1.setText("The alcoholic bartender");

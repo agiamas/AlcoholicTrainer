@@ -6,6 +6,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -15,6 +16,20 @@ LinkedList totalDrinks;
 	PropertiesReader(String propFile) {
 		this.propFile = propFile;
 		//init class to read the xml file with drinks settings
+	}
+	
+	boolean checkAnswer(String drinkname, LinkedList elementsChecked) {
+		LinkedList elements = this.getDrinkElements(drinkname, 0);
+	//	HashMap hm = new HashMap();
+	//	hm.put(key, value)
+		for(String el : elementsChecked.toString()) {
+			for(String el2 : elements.toString()) {
+				if(el2.equals(el)){
+					System.out.println("got it");
+				}
+			}
+		}
+		return true;
 	}
 	
 	Document getDocument() {
