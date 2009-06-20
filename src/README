@@ -1,0 +1,20 @@
+README file for the alcoholic trainer:
+
+api for the properties reader.
+LinkedList getDrinks() : returns a linked list of all the drinks in the XML file
+LinkedList getDrinkElements() : returns a linked list of all the elements in a drink
+1 == simple mode:
+~~~boolean checkAnswer(String drinkname, LinkedList elementsChecked) : input the drink that we want to check for
+the correct answer and the elements that the user checked. 
+returns true if the answer is correct, false else
+2 == intermediate mode:
+~~~boolean checkAnswer(String drinkname, HashMap elementsCheckedWithQuantities) : input the drink that we want 
+to check for the correct answer and the elements that the user checked as key and the quantity of the drink as value. 
+returns true if the answer is correct, false else
+3 == expert mode:
+~~~boolean checkAnswer(String drinkname, HashMap elementsCheckedWithQuantities, LinkedList specialInstructions) : 
+input the drink that we want to check for the correct answer and the elements that the user checked as key
+and the quantity of the drink as value. Also input a linkedlist of the special instructions checked for the drink
+returns true if the answer is correct, false else
+
+~~~ getAllDrinkElements
