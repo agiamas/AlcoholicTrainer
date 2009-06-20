@@ -19,8 +19,8 @@ public class StartClass {
 		tempdoc = pr.getDocument();
 		LinkedList drinks = pr.getDrinks();
 		Iterator itr2 = drinks.iterator();
-	
-		 LinkedList drinkelements = pr.getDrinkElements(drinks.get(0).toString(), 0);
+
+		LinkedList drinkelements = pr.getDrinkElements(drinks.get(0).toString(), 0);
 		//LinkedList drinkelements = pr.getDrinkElements("screaming orgasm");
 		 Iterator itr = drinkelements.iterator();
 		 while(itr.hasNext()) {
